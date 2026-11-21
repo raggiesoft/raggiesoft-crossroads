@@ -1,0 +1,67 @@
+---
+layout: base.njk
+permalink: /catalog/index.html
+canonicalPath: "/catalog"
+seoTitle: "Story Crossroads Bookshelf | Interactive Editions"
+seoDescription: "Browse published RaggieSoft Story Crossroads interactive novels, starting with Cedar Run—our three-route Pacific Northwest wilderness story."
+---
+{#
+  ============================================================================
+  src/site/catalog.njk — Imprint Bookshelf (`https://crossroads.raggiesoft.com/catalog`)
+  ============================================================================
+  PLAIN-ENGLISH OVERVIEW:
+    Displays all published RaggieSoft Story Crossroads interactive editions with
+    direct links to RaggieSoft Book Reader (`books.raggiesoft.com`) and companion
+    world guides.
+  ============================================================================
+#}
+
+<section class="cr-section cr-mt-0" aria-labelledby="catalog-heading">
+  <span class="cr-eyebrow">
+    <span aria-hidden="true">📚</span>
+    <span>Official Imprint Bookshelf</span>
+  </span>
+  <h1 id="catalog-heading" class="cr-hero-title">RaggieSoft Story Crossroads Editions</h1>
+  <p class="cr-lead">
+    Every edition below is free to read online in RaggieSoft Book Reader—with automatic route memory
+    and one-tap signpost returns whenever you want to explore a different path.
+  </p>
+
+  {% for book in imprint.editions %}
+  <article class="cr-book-showcase">
+    <img
+      src="{{ book.cover2x3 }}"
+      alt="{{ book.title }} cover stamped with the 3-Way RaggieSoft Story Crossroads seal"
+      width="260"
+      height="390"
+      class="cr-book-cover"
+    />
+    <div>
+      <span class="cr-eyebrow">{{ book.directionsLabel }} • {{ book.eraLabel }}</span>
+      <h2 class="cr-section-title cr-mt-0">{{ book.title }}: {{ book.subtitle }}</h2>
+      <p class="cr-card-body">{{ book.synopsis }}</p>
+
+      <ul class="cr-route-list" aria-label="Routes available in {{ book.title }}">
+        {% for route in book.routes %}
+        <li class="cr-route-item">
+          <span class="cr-route-badge">{{ route.badge }}</span>
+          <strong>{{ route.name }}</strong>
+          <p class="cr-card-body">{{ route.summary }}</p>
+        </li>
+        {% endfor %}
+      </ul>
+
+      <div class="cr-actions">
+        <a href="{{ book.readUrl }}" class="cr-btn cr-btn-primary">
+          <span aria-hidden="true">📖</span>
+          <span>Open in RaggieSoft Book Reader</span>
+        </a>
+        <a href="{{ book.worldUrl }}" class="cr-btn cr-btn-secondary">
+          <span aria-hidden="true">🌲</span>
+          <span>Visit Cedar Run Valley Guide</span>
+        </a>
+      </div>
+    </div>
+  </article>
+  {% endfor %}
+</section>

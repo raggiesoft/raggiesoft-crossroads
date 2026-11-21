@@ -1,0 +1,228 @@
+{#
+  ============================================================================
+  src/site/_includes/base.njk — Master HTML5 Layout Shell (Eleventy v3 Nunjucks)
+  Property: https://crossroads.raggiesoft.com (raggiesoft-crossroads)
+  ============================================================================
+  PLAIN-ENGLISH OVERVIEW (100-LEVEL NUNJUCKS & WEB ACCESSIBILITY GUIDE):
+    What is `_includes/base.njk`?
+      In Eleventy, every content page (`index.njk`, `how-it-works.njk`, `seals.njk`,
+      `catalog.njk`, `sandbox.njk`, `404.njk`) declares `layout: base.njk` in its
+      YAML frontmatter at the top of the file. Eleventy wraps that page's body
+      inside `{{ content | safe }}` right here so every page shares identical
+      accessibility landmarks, SEO metadata, navigation, and legal disclaimers!
+
+    Accessibility & Zero-Flash Theme Architecture:
+      1. `<meta name="color-scheme" content="light dark">` + the 1-line inline
+         `<script>` apply any stored `'light'` or `'dark'` comfort override BEFORE
+         the browser paints a single pixel—preventing dark-mode flash!
+      2. `.cr-skip-link` lets keyboard users press `Tab` once and jump straight
+         to `<main id="main-content">`.
+      3. Every page emits clean OpenGraph (`og:*`), Twitter Card, canonical URL,
+         and comment-free Schema.org JSON-LD (`application/ld+json`).
+  ============================================================================
+#}
+{%- set canonicalUrl = imprint.siteOrigin + (canonicalPath or '') -%}
+{%- set metaImage = ogImage or imprint.heroImage -%}
+{%- set schemaGraph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Brand",
+      "@id": "https://crossroads.raggiesoft.com/#brand",
+      "name": "RaggieSoft Story Crossroads",
+      "description": "Independent interactive-fiction imprint by Michael P. Ragsdale featuring branching literary novels with coequal character-driven routes.",
+      "url": "https://crossroads.raggiesoft.com/",
+      "logo": imprint.logos.emblem3Way
+    },
+    {
+      "@type": "WebPage",
+      "@id": canonicalUrl + "#webpage",
+      "name": seoTitle,
+      "description": seoDescription,
+      "url": canonicalUrl,
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://crossroads.raggiesoft.com/#website",
+        "name": "RaggieSoft Story Crossroads",
+        "url": "https://crossroads.raggiesoft.com/"
+      }
+    }
+  ]
+} -%}
+<!doctype html>
+<!--
+  RaggieSoft Story Crossroads (https://crossroads.raggiesoft.com)
+  Built with Eleventy v3 Static HTML Templates and Google Lit 3 Custom Elements.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+    <!-- Native OS Light & Dark Color Scheme + Synchronous Zero-Flash Override Restorer -->
+    <meta name="color-scheme" content="light dark" />
+    <script>
+      try {
+        var s = localStorage.getItem('color-scheme');
+        if (s === 'light' || s === 'dark') {
+          document.querySelector('meta[name="color-scheme"]').content = s;
+        }
+      } catch (e) {}
+    </script>
+
+    <meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#07131a" media="(prefers-color-scheme: dark)" />
+
+    <title>{{ seoTitle }}</title>
+    <meta name="description" content="{{ seoDescription }}" />
+    {% if noindex %}
+    <meta name="robots" content="noindex, follow" />
+    {% else %}
+    <link rel="canonical" href="{{ canonicalUrl }}" />
+    {% endif %}
+
+    <!-- OpenGraph & Social Preview Metadata -->
+    <meta property="og:site_name" content="{{ imprint.siteName }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ seoTitle }}" />
+    <meta property="og:description" content="{{ seoDescription }}" />
+    <meta property="og:url" content="{{ canonicalUrl }}" />
+    <meta property="og:image" content="{{ metaImage }}" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="675" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ seoTitle }}" />
+    <meta name="twitter:description" content="{{ seoDescription }}" />
+    <meta name="twitter:image" content="{{ metaImage }}" />
+
+    <link rel="icon" type="image/svg+xml" href="{{ imprint.logos.seal3Way }}" />
+
+    <!-- Shared RaggieSoft Network Chrome + Story Crossroads Compass Stylesheet -->
+    <link rel="stylesheet" href="https://assets.raggiesoft.com/common/css/raggiesoft-network.css" />
+    <link rel="stylesheet" href="/assets/crossroads.css" />
+
+    {% if not noindex %}
+    <script type="application/ld+json">{{ schemaGraph | jsonStringify | safe }}</script>
+    {% endif %}
+  </head>
+  <body>
+    <a href="#main-content" class="cr-skip-link">Skip to main content</a>
+
+    <!-- Universal RaggieSoft Ecosystem Bar (Progressively enhanced by raggiesoft-network.js) -->
+    <nav class="rs-network-bar" aria-label="RaggieSoft Ecosystem Network">
+      <div class="rs-network-bar-inner">
+        <span class="rs-network-label">✦ RaggieSoft Network:</span>
+        <ul class="rs-network-links">
+          <li><a href="https://raggiesoft.com">🌐 Hub</a></li>
+          <li><a href="https://books.raggiesoft.com">📚 Ocean View Archives</a></li>
+          <li><a href="https://crossroads.raggiesoft.com" aria-current="page" class="is-active">🧭 Story Crossroads</a></li>
+          <li><a href="https://cedarrun.raggiesoft.com">🌲 Cedar Run</a></li>
+          <li><a href="https://music.raggiesoft.com">🎧 The Listening Room</a></li>
+          <li><a href="https://backstage.raggiesoft.com">🎬 Backstage</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Primary Story Crossroads Imprint Header & Navigation -->
+    <header class="cr-header">
+      <div class="cr-container cr-header-inner">
+        <a href="/" class="cr-brand">
+          <img
+            src="{{ imprint.logos.seal3Way }}"
+            alt=""
+            width="46"
+            height="46"
+            class="cr-brand-seal"
+          />
+          <span>
+            <span class="cr-brand-title">RaggieSoft Story Crossroads</span>
+            <span class="cr-brand-subtitle">Interactive Branching Novels • Coequal Routes</span>
+          </span>
+        </a>
+
+        <div class="cr-nav-row">
+          <nav aria-label="Story Crossroads Imprint">
+            <ul class="cr-nav-list">
+              {% for item in imprint.navRoutes %}
+              <li>
+                <a
+                  href="{{ item.url }}"
+                  class="cr-nav-link"
+                  {% if canonicalPath == item.url or (item.url == '/' and canonicalPath == '') %}aria-current="page"{% endif %}
+                >{{ item.label }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </nav>
+
+          <!-- Two-state comfort reading-light toggle (Sunlit Parchment vs. Midnight Compass) -->
+          <button type="button" id="cr-reading-light-toggle" class="cr-theme-btn">
+            <span class="cr-theme-to-dark">
+              <span aria-hidden="true">🌙</span>
+              <span>Night Lamp</span>
+            </span>
+            <span class="cr-theme-to-light">
+              <span aria-hidden="true">☀️</span>
+              <span>Daylight Page</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="cr-main" tabindex="-1">
+      <div class="cr-container">
+        {{ content | safe }}
+      </div>
+    </main>
+
+    <!-- Global Imprint Footer with Mandatory Fictitious Disclaimer & Creative Commons Licensing -->
+    <footer class="cr-footer">
+      <div class="cr-container">
+        <div class="cr-footer-grid">
+          <div>
+            <h2 class="cr-card-title">RaggieSoft Story Crossroads</h2>
+            <p class="cr-card-body">
+              An unincorporated creative publishing imprint by Michael P. Ragsdale dedicated to
+              standalone interactive novels where every choice opens a full-hearted literary route.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="cr-card-title">Explore the Library</h2>
+            <ul class="cr-nav-list">
+              <li><a href="https://books.raggiesoft.com/cedar-run" class="cr-nav-link">📚 Read Cedar Run</a></li>
+              <li><a href="https://cedarrun.raggiesoft.com" class="cr-nav-link">🌲 Cedar Run Field Guide</a></li>
+              <li><a href="https://books.raggiesoft.com" class="cr-nav-link">🌊 Ocean View Archives</a></li>
+              <li><a href="https://backstage.raggiesoft.com" class="cr-nav-link">🎬 RaggieSoft Backstage</a></li>
+              <li><a href="https://music.raggiesoft.com" class="cr-nav-link">🎧 The Listening Room</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="cr-card-title">Creative Licensing</h2>
+            <p class="cr-card-body">
+              Story narratives and illustrations are shared under
+              <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> alongside
+              commercial licensing via
+              <a href="https://raggiesoft.com/raggiesoft-media/licensing/commercial">RaggieSoft Media</a>.
+            </p>
+          </div>
+        </div>
+
+        <div class="cr-disclaimer-box" role="note" aria-label="Fictitious Persons and Entities Disclaimer">
+          <strong>Work of Fiction Disclaimer:</strong> All RaggieSoft Story Crossroads and Ocean View
+          Archives characters, families, musical artists, universities (including CPI, VDU, The Forgers,
+          and The Crucible), corporations (including OmniCorp, Apex Records, Prairie Coachworks, and
+          Sainte-Claire), transit agencies (BRT, CVTA), in-universe legal filings, and story events are
+          works of fiction. Any resemblance to actual persons, living or dead, or real-world entities is
+          purely coincidental.
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://assets.raggiesoft.com/common/js/raggiesoft-network.js" defer></script>
+    <script type="module" src="/assets/crossroads-islands.js"></script>
+  </body>
+</html>

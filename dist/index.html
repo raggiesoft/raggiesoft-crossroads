@@ -1,0 +1,413 @@
+<!doctype html>
+<!--
+  RaggieSoft Story Crossroads (https://crossroads.raggiesoft.com)
+  Built with Eleventy v3 Static HTML Templates and Google Lit 3 Custom Elements.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+    <!-- Native OS Light & Dark Color Scheme + Synchronous Zero-Flash Override Restorer -->
+    <meta name="color-scheme" content="light dark" />
+    <script>
+      try {
+        var s = localStorage.getItem('color-scheme');
+        if (s === 'light' || s === 'dark') {
+          document.querySelector('meta[name="color-scheme"]').content = s;
+        }
+      } catch (e) {}
+    </script>
+
+    <meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#07131a" media="(prefers-color-scheme: dark)" />
+
+    <title>RaggieSoft Story Crossroads | Interactive Novels</title>
+    <meta name="description" content="Step onto the porch with Crossroads Architects Rowan and Iris Hawthorne to explore RaggieSoft Story Crossroads interactive branching novels." />
+    
+    <link rel="canonical" href="https://crossroads.raggiesoft.com" />
+    
+
+    <!-- OpenGraph & Social Preview Metadata -->
+    <meta property="og:site_name" content="RaggieSoft Story Crossroads" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="RaggieSoft Story Crossroads | Interactive Novels" />
+    <meta property="og:description" content="Step onto the porch with Crossroads Architects Rowan and Iris Hawthorne to explore RaggieSoft Story Crossroads interactive branching novels." />
+    <meta property="og:url" content="https://crossroads.raggiesoft.com" />
+    <meta property="og:image" content="https://assets.raggiesoft.com/raggiesoft-books/images/covers/og/story-crossroads-imprint.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="675" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="RaggieSoft Story Crossroads | Interactive Novels" />
+    <meta name="twitter:description" content="Step onto the porch with Crossroads Architects Rowan and Iris Hawthorne to explore RaggieSoft Story Crossroads interactive branching novels." />
+    <meta name="twitter:image" content="https://assets.raggiesoft.com/raggiesoft-books/images/covers/og/story-crossroads-imprint.jpg" />
+
+    <link rel="icon" type="image/svg+xml" href="https://assets.raggiesoft.com/raggiesoft-books/images/logos/story-crossroads-seal-3way.svg" />
+
+    <!-- Shared RaggieSoft Network Chrome + Story Crossroads Compass Stylesheet -->
+    <link rel="stylesheet" href="https://assets.raggiesoft.com/common/css/raggiesoft-network.css" />
+    <link rel="stylesheet" href="/assets/crossroads.css" />
+
+    
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Brand","@id":"https://crossroads.raggiesoft.com/#brand","name":"RaggieSoft Story Crossroads","description":"Independent interactive-fiction imprint by Michael P. Ragsdale featuring branching literary novels with coequal character-driven routes.","url":"https://crossroads.raggiesoft.com/","logo":"https://assets.raggiesoft.com/raggiesoft-books/images/logos/story-crossroads-logo-3way-512.png"},{"@type":"WebPage","@id":"https://crossroads.raggiesoft.com#webpage","name":"RaggieSoft Story Crossroads | Interactive Novels","description":"Step onto the porch with Crossroads Architects Rowan and Iris Hawthorne to explore RaggieSoft Story Crossroads interactive branching novels.","url":"https://crossroads.raggiesoft.com","isPartOf":{"@type":"WebSite","@id":"https://crossroads.raggiesoft.com/#website","name":"RaggieSoft Story Crossroads","url":"https://crossroads.raggiesoft.com/"}}]}</script>
+    
+  </head>
+  <body>
+    <a href="#main-content" class="cr-skip-link">Skip to main content</a>
+
+    <!-- Universal RaggieSoft Ecosystem Bar (Progressively enhanced by raggiesoft-network.js) -->
+    <nav class="rs-network-bar" aria-label="RaggieSoft Ecosystem Network">
+      <div class="rs-network-bar-inner">
+        <span class="rs-network-label">✦ RaggieSoft Network:</span>
+        <ul class="rs-network-links">
+          <li><a href="https://raggiesoft.com">🌐 Hub</a></li>
+          <li><a href="https://books.raggiesoft.com">📚 Ocean View Archives</a></li>
+          <li><a href="https://crossroads.raggiesoft.com" aria-current="page" class="is-active">🧭 Story Crossroads</a></li>
+          <li><a href="https://cedarrun.raggiesoft.com">🌲 Cedar Run</a></li>
+          <li><a href="https://music.raggiesoft.com">🎧 The Listening Room</a></li>
+          <li><a href="https://backstage.raggiesoft.com">🎬 Backstage</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Primary Story Crossroads Imprint Header & Navigation -->
+    <header class="cr-header">
+      <div class="cr-container cr-header-inner">
+        <a href="/" class="cr-brand">
+          <img
+            src="https://assets.raggiesoft.com/raggiesoft-books/images/logos/story-crossroads-seal-3way.svg"
+            alt=""
+            width="46"
+            height="46"
+            class="cr-brand-seal"
+          />
+          <span>
+            <span class="cr-brand-title">RaggieSoft Story Crossroads</span>
+            <span class="cr-brand-subtitle">Interactive Branching Novels • Coequal Routes</span>
+          </span>
+        </a>
+
+        <div class="cr-nav-row">
+          <nav aria-label="Story Crossroads Imprint">
+            <ul class="cr-nav-list">
+              
+              <li>
+                <a
+                  href="/"
+                  class="cr-nav-link"
+                  aria-current="page"
+                >Signpost Home</a>
+              </li>
+              
+              <li>
+                <a
+                  href="/architects"
+                  class="cr-nav-link"
+                  
+                >Rowan &amp; Iris</a>
+              </li>
+              
+              <li>
+                <a
+                  href="/how-it-works"
+                  class="cr-nav-link"
+                  
+                >How It Works</a>
+              </li>
+              
+              <li>
+                <a
+                  href="/seals"
+                  class="cr-nav-link"
+                  
+                >2-Way &amp; 3-Way Seals</a>
+              </li>
+              
+              <li>
+                <a
+                  href="/catalog"
+                  class="cr-nav-link"
+                  
+                >Bookshelf</a>
+              </li>
+              
+              <li>
+                <a
+                  href="/sandbox"
+                  class="cr-nav-link"
+                  
+                >Try a Crossroads</a>
+              </li>
+              
+            </ul>
+          </nav>
+
+          <!-- Two-state comfort reading-light toggle (Sunlit Parchment vs. Midnight Compass) -->
+          <button type="button" id="cr-reading-light-toggle" class="cr-theme-btn">
+            <span class="cr-theme-to-dark">
+              <span aria-hidden="true">🌙</span>
+              <span>Night Lamp</span>
+            </span>
+            <span class="cr-theme-to-light">
+              <span aria-hidden="true">☀️</span>
+              <span>Daylight Page</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="cr-main" tabindex="-1">
+      <div class="cr-container">
+        
+
+<section class="cr-hero" aria-labelledby="hero-heading">
+  <div>
+    <span class="cr-eyebrow">
+      <span aria-hidden="true">🧭</span>
+      <span>RaggieSoft Interactive Fiction Imprint</span>
+    </span>
+    <h1 id="hero-heading" class="cr-hero-title">
+      Where Every Fork in the Trail Opens a Complete Story.
+    </h1>
+    <p class="cr-lead">
+      Welcome to <strong>RaggieSoft Story Crossroads</strong>—tended by brother-and-sister Crossroads
+      Architects <strong>Rowan &amp; Iris Hawthorne</strong>. Every option at a Crossroads leads into a
+      rich, full-length literary route with zero trick endings or dead ends.
+    </p>
+    <div class="cr-actions">
+      <a href="https://books.raggiesoft.com/cedar-run" class="cr-btn cr-btn-primary">
+        <span aria-hidden="true">📚</span>
+        <span>Read Cedar Run Now</span>
+      </a>
+      <a href="#live-crossroads-preview" class="cr-btn cr-btn-secondary">
+        <span aria-hidden="true">🧭</span>
+        <span>Try Rowan’s Live Signpost</span>
+      </a>
+      <a href="/architects" class="cr-btn cr-btn-secondary">
+        <span aria-hidden="true">✦</span>
+        <span>Meet Rowan &amp; Iris</span>
+      </a>
+    </div>
+  </div>
+
+  <figure class="cr-hero-media">
+    <img
+      src="https://assets.raggiesoft.com/raggiesoft-books/images/covers/og/story-crossroads-imprint.jpg"
+      alt="Antique brass and deep teal compass beside an open journal and glowing lantern overlooking a twilight stone trail splitting into three lantern-lit paths toward a cedar creek, a starlit ridge beneath the Milky Way, and distant coastal lights"
+      width="1200"
+      height="675"
+      fetchpriority="high"
+    />
+    <figcaption class="cr-hero-caption">
+      View from the Lantern Signpost Conservatory—three inviting trails, zero wrong answers.
+    </figcaption>
+  </figure>
+</section>
+
+<section class="cr-section" aria-labelledby="hosts-heading">
+  <div class="cr-book-showcase" style="grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); align-items: center;">
+    <figure class="cr-hero-media">
+      <img
+        src="https://assets.raggiesoft.com/raggiesoft-books/images/scenes/crossroads/rowan_and_iris_hawthorne_signpost_architects.jpg"
+        alt="Rowan Hawthorne with his brass compass and open trail map standing beside his sister Iris Hawthorne holding a leather-bound novel on the lantern-lit stone porch"
+        width="1200"
+        height="675"
+        loading="lazy"
+      />
+      <figcaption class="cr-hero-caption">
+        Rowan &amp; Iris Hawthorne, your guides to every Story Crossroads signpost and medallion.
+      </figcaption>
+    </figure>
+
+    <div>
+      <span class="cr-eyebrow">
+        <span aria-hidden="true">✦</span>
+        <span>Your Guides at the Signpost</span>
+      </span>
+      <h2 id="hosts-heading" class="cr-section-title">Built by Brother &amp; Sister Architects</h2>
+      <p class="cr-card-body" style="margin-bottom: 0.9rem;">
+        “Pull up a chair by the lantern! Over at Ocean View Archives, our friends Isabel, Eleanor, Sophia, and Oliver guard the great single-timeline novels. Out here on the porch, my brother Rowan and I build the signposts for stories meant to branch—where every single trail you pick leads somewhere whole, honest, and worth the walk.”
+      </p>
+      <p class="cr-card-body" style="margin-bottom: 1.25rem;">
+        <strong>Rowan</strong> maps the diverging trails so every option leads to a true horizon, while
+        <strong>Iris</strong> stamps the 2-Way and 3-Way Compass Medallions and keeps every route’s
+        memory intact.
+      </p>
+      <div class="cr-actions">
+        <a href="/architects" class="cr-btn cr-btn-secondary">Meet Rowan &amp; Iris →</a>
+        <a href="/how-it-works" class="cr-btn cr-btn-secondary">How the Crossroads Works →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cr-section" aria-labelledby="pillars-heading">
+  <div class="cr-section-header">
+    <h2 id="pillars-heading" class="cr-section-title">The Story Crossroads Promise</h2>
+    <p class="cr-card-body">
+      Why Rowan and Iris built a dedicated home alongside Ocean View Archives specifically for branching novels.
+    </p>
+  </div>
+
+  <div class="cr-grid-2">
+    
+    <article class="cr-card">
+      <span class="cr-card-icon" aria-hidden="true">🧭</span>
+      <h3 class="cr-card-title">Every Route Is Coequal</h3>
+      <p class="cr-card-body">Rowan’s first rule at the drafting desk: there are never abrupt dead ends or &quot;wrong answers.&quot; Every option opens a complete, thoughtfully written storyline.</p>
+    </article>
+    
+    <article class="cr-card">
+      <span class="cr-card-icon" aria-hidden="true">📖</span>
+      <h3 class="cr-card-title">Novel-Grade Literary Prose</h3>
+      <p class="cr-card-body">Each Story Crossroads edition reads with the same rich sensory atmosphere, emotional warmth, and lived-in dialogue as our Ocean View Archives novels.</p>
+    </article>
+    
+    <article class="cr-card">
+      <span class="cr-card-icon" aria-hidden="true">🌲</span>
+      <h3 class="cr-card-title">Self-Contained Worlds</h3>
+      <p class="cr-card-body">Purpose-built standalone settings give your choices genuine room to reshape where characters live, what they build, and who they become.</p>
+    </article>
+    
+    <article class="cr-card">
+      <span class="cr-card-icon" aria-hidden="true">🔖</span>
+      <h3 class="cr-card-title">Step Back Anytime</h3>
+      <p class="cr-card-body">Iris’s route-memory ribbon remembers your active path across chapters while letting you return to any Crossroads signpost with a single tap.</p>
+    </article>
+    
+  </div>
+</section>
+
+<section id="live-crossroads-preview" class="cr-section" aria-labelledby="preview-heading">
+  <div class="cr-section-header">
+    <span class="cr-eyebrow">
+      <span aria-hidden="true">🧭</span>
+      <span>Guided by Rowan &amp; Iris</span>
+    </span>
+    <h2 id="preview-heading" class="cr-section-title">Step Up to the Signpost</h2>
+    <p class="cr-card-body">
+      Rowan set three lanterns out on the evening trail so you can feel how a Story Crossroads works in
+      real time—pick a 3-Way trail, follow it into a 2-Way Crossroads, and use Iris’s trail pills to
+      step back anytime.
+    </p>
+  </div>
+
+  <crossroads-live-sandbox></crossroads-live-sandbox>
+</section>
+
+<section class="cr-section" aria-labelledby="flagship-heading">
+  <div class="cr-section-header">
+    <span class="cr-eyebrow">
+      <span aria-hidden="true">🌲</span>
+      <span>Inaugural 3-Way Edition</span>
+    </span>
+    <h2 id="flagship-heading" class="cr-section-title">Featured Edition: Cedar Run</h2>
+  </div>
+
+  
+  <article class="cr-book-showcase">
+    <img
+      src="https://assets.raggiesoft.com/raggiesoft-books/images/covers/2x3/cedar-run.jpg"
+      alt="Cedar Run book cover featuring Iris’s circular 3-Way Story Crossroads medallion"
+      width="260"
+      height="390"
+      loading="lazy"
+      class="cr-book-cover"
+    />
+    <div>
+      <span class="cr-eyebrow">3-Way Story Crossroads Edition • Summer 2000 • Northeast Washington Wilderness</span>
+      <h3 class="cr-section-title cr-mt-0">Cedar Run — Book One: First Foothold in the Valley</h3>
+      <p class="cr-card-body" style="margin-bottom: 0.85rem;">Turned out on the evening of their eighteenth birthday simply for refusing to scatter onto three separate lives, fraternal brother Luke and identical twin sisters Tessa and Sadie Bridger step past their backyard fence into deep old-growth cedar forest with Grandpa Owen Sawyer’s canvas tool roll and 1974 mahogany guitar.</p>
+      <p class="cr-card-body"><em>Rowan &amp; Iris’s Field Note: “Luke, Tessa, and Sadie Bridger refused to let anyone split the three of them apart at eighteen. At their first Crossroads, you help all three triplets choose where in the valley to build their shelter together.”</em></p>
+
+      <ul class="cr-route-list" aria-label="Three Crossroads routes in Cedar Run">
+        
+        <li class="cr-route-item">
+          <span class="cr-route-badge">Option 1 • Creek-Side Timber</span>
+          <strong>The Creek-Bend Cedar Bench</strong>
+          <p class="cr-card-body">Split straight-grained windfall western red cedar planks beside cutthroat trout pools and soothing mountain rain.</p>
+        </li>
+        
+        <li class="cr-route-item">
+          <span class="cr-route-badge">Option 2 • Dry-Stone Hearth</span>
+          <strong>The Granite Overhang</strong>
+          <p class="cr-card-body">Dry-stack warm Kettle Range granite beneath a natural rock ceiling thirty feet above the valley floor.</p>
+        </li>
+        
+        <li class="cr-route-item">
+          <span class="cr-route-badge">Option 3 • High Meadow Spring</span>
+          <strong>The Forgotten Stone Springhouse</strong>
+          <p class="cr-card-body">Restore an overgrown 1930s mossy stone springhouse beside cold artesian water and wild huckleberry slopes.</p>
+        </li>
+        
+      </ul>
+
+      <div class="cr-actions">
+        <a href="https://books.raggiesoft.com/cedar-run" class="cr-btn cr-btn-primary">
+          <span aria-hidden="true">📖</span>
+          <span>Start Reading Cedar Run</span>
+        </a>
+        <a href="https://cedarrun.raggiesoft.com" class="cr-btn cr-btn-secondary">
+          <span aria-hidden="true">🌲</span>
+          <span>Explore Cedar Run World Guide</span>
+        </a>
+      </div>
+    </div>
+  </article>
+  
+</section>
+
+      </div>
+    </main>
+
+    <!-- Global Imprint Footer with Mandatory Fictitious Disclaimer & Creative Commons Licensing -->
+    <footer class="cr-footer">
+      <div class="cr-container">
+        <div class="cr-footer-grid">
+          <div>
+            <h2 class="cr-card-title">RaggieSoft Story Crossroads</h2>
+            <p class="cr-card-body">
+              An unincorporated creative publishing imprint by Michael P. Ragsdale dedicated to
+              standalone interactive novels where every choice opens a full-hearted literary route.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="cr-card-title">Explore the Library</h2>
+            <ul class="cr-nav-list">
+              <li><a href="https://books.raggiesoft.com/cedar-run" class="cr-nav-link">📚 Read Cedar Run</a></li>
+              <li><a href="https://cedarrun.raggiesoft.com" class="cr-nav-link">🌲 Cedar Run Field Guide</a></li>
+              <li><a href="https://books.raggiesoft.com" class="cr-nav-link">🌊 Ocean View Archives</a></li>
+              <li><a href="https://backstage.raggiesoft.com" class="cr-nav-link">🎬 RaggieSoft Backstage</a></li>
+              <li><a href="https://music.raggiesoft.com" class="cr-nav-link">🎧 The Listening Room</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="cr-card-title">Creative Licensing</h2>
+            <p class="cr-card-body">
+              Story narratives and illustrations are shared under
+              <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> alongside
+              commercial licensing via
+              <a href="https://raggiesoft.com/raggiesoft-media/licensing/commercial">RaggieSoft Media</a>.
+            </p>
+          </div>
+        </div>
+
+        <div class="cr-disclaimer-box" role="note" aria-label="Fictitious Persons and Entities Disclaimer">
+          <strong>Work of Fiction Disclaimer:</strong> All RaggieSoft Story Crossroads and Ocean View
+          Archives characters, families, musical artists, universities (including CPI, VDU, The Forgers,
+          and The Crucible), corporations (including OmniCorp, Apex Records, Prairie Coachworks, and
+          Sainte-Claire), transit agencies (BRT, CVTA), in-universe legal filings, and story events are
+          works of fiction. Any resemblance to actual persons, living or dead, or real-world entities is
+          purely coincidental.
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://assets.raggiesoft.com/common/js/raggiesoft-network.js" defer></script>
+    <script type="module" src="/assets/crossroads-islands.js"></script>
+  </body>
+</html>

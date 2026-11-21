@@ -1,0 +1,105 @@
+---
+layout: base.njk
+permalink: /architects/index.html
+canonicalPath: "/architects"
+ogImage: "https://assets.raggiesoft.com/raggiesoft-books/images/scenes/crossroads/rowan_and_iris_hawthorne_signpost_architects.jpg"
+seoTitle: "Rowan & Iris Hawthorne | Architects of the Crossroads"
+seoDescription: "Meet brother and sister Rowan and Iris Hawthorne—the in-universe trail cartographer and medallion keeper behind RaggieSoft Story Crossroads."
+---
+{#
+  ============================================================================
+  src/site/architects.njk — Meet Rowan & Iris (`https://crossroads.raggiesoft.com/architects`)
+  ============================================================================
+  PLAIN-ENGLISH OVERVIEW:
+    Introduces brother and sister Rowan & Iris Hawthorne—the in-universe
+    Architects of the Crossroads who explain how Story Crossroads works, tend
+    the Lantern Signpost Conservatory, and work alongside the OVA Siblings.
+  ============================================================================
+#}
+
+<section class="cr-hero" aria-labelledby="architects-heading">
+  <div>
+    <span class="cr-eyebrow">
+      <span aria-hidden="true">🧭</span>
+      <span>{{ imprint.architects.conservatoryName }}</span>
+    </span>
+    <h1 id="architects-heading" class="cr-hero-title">
+      Meet Rowan &amp; Iris Hawthorne, Architects of the Crossroads
+    </h1>
+    <p class="cr-lead">
+      {{ imprint.architects.introQuote }}
+    </p>
+    <p class="cr-card-body"><strong>{{ imprint.architects.introSpeaker }}</strong></p>
+    <div class="cr-actions" style="margin-top: 1.25rem;">
+      <a href="/sandbox" class="cr-btn cr-btn-primary">
+        <span aria-hidden="true">🧭</span>
+        <span>Walk Rowan’s Live Signpost Trail</span>
+      </a>
+      <a href="/seals" class="cr-btn cr-btn-secondary">
+        <span aria-hidden="true">✦</span>
+        <span>Inspect Iris’s Compass Medallions</span>
+      </a>
+    </div>
+  </div>
+
+  <figure class="cr-hero-media">
+    <img
+      src="{{ imprint.architectsImage }}"
+      alt="Brother Rowan Hawthorne holding an antique brass compass beside an open trail map and sister Iris Hawthorne holding a leather-bound novel on a lantern-lit twilight stone porch overlooking three diverging paths"
+      width="1200"
+      height="675"
+      fetchpriority="high"
+    />
+    <figcaption class="cr-hero-caption">
+      Rowan (Trail Cartographer) and Iris Hawthorne (Medallion Engraver) on the porch of the Lantern Signpost Conservatory.
+    </figcaption>
+  </figure>
+</section>
+
+<section class="cr-section" aria-labelledby="roles-heading">
+  <div class="cr-section-header">
+    <h2 id="roles-heading" class="cr-section-title">How Brother &amp; Sister Divide the Craft</h2>
+    <p class="cr-card-body">
+      Every Story Crossroads edition passes across both desks before its lantern is lit on the bookshelf.
+    </p>
+  </div>
+
+  <div class="cr-grid-2">
+    {% for sib in imprint.architects.siblings %}
+    <article class="cr-card">
+      <span class="cr-route-badge">{{ sib.ageAndRole }}</span>
+      <h3 class="cr-card-title">
+        <span aria-hidden="true">{{ sib.icon }}</span>
+        <span>{{ sib.name }} — {{ sib.specialty }}</span>
+      </h3>
+      <blockquote style="margin: 0.35rem 0; padding: 0.85rem 1rem; border-left: 4px solid var(--cr-teal); background: var(--cr-brass-surface); border-radius: 0.5rem;">
+        {{ sib.voiceQuote }}
+      </blockquote>
+      <ul style="margin: 0.4rem 0 0; padding-left: 1.25rem;">
+        {% for duty in sib.duties %}
+        <li class="cr-card-body" style="margin-bottom: 0.4rem;">{{ duty }}</li>
+        {% endfor %}
+      </ul>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="cr-section" aria-labelledby="laws-heading">
+  <div class="cr-section-header">
+    <h2 id="laws-heading" class="cr-section-title">The Three Laws of the Lantern Signpost</h2>
+    <p class="cr-card-body">
+      Pinned in brass tacks above Rowan’s drafting board and Iris’s engraving press.
+    </p>
+  </div>
+
+  <div class="cr-grid-3">
+    {% for law in imprint.architects.threeLaws %}
+    <article class="cr-card">
+      <span class="cr-eyebrow">{{ law.number }}</span>
+      <h3 class="cr-card-title">{{ law.title }}</h3>
+      <p class="cr-card-body">{{ law.body }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>

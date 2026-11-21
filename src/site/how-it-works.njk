@@ -1,0 +1,60 @@
+---
+layout: base.njk
+permalink: /how-it-works/index.html
+canonicalPath: "/how-it-works"
+seoTitle: "How Story Crossroads Works | Coequal Story Routes"
+seoDescription: "Rowan and Iris Hawthorne explain how RaggieSoft Story Crossroads novels honor every reader choice with coequal routes and signpost returns."
+---
+{#
+  ============================================================================
+  src/site/how-it-works.njk — Reader Guide (`https://crossroads.raggiesoft.com/how-it-works`)
+  ============================================================================
+#}
+
+<section class="cr-section cr-mt-0" aria-labelledby="how-heading">
+  <span class="cr-eyebrow">
+    <span aria-hidden="true">📖</span>
+    <span>Rowan &amp; Iris’s Field Guide</span>
+  </span>
+  <h1 id="how-heading" class="cr-hero-title">How a Story Crossroads Novel Unfolds</h1>
+  <p class="cr-lead">
+    Rowan maps the trails and Iris keeps your place—here is what happens from the moment you open page
+    one in RaggieSoft Book Reader to the moment you explore a second or third horizon.
+  </p>
+
+  <div class="cr-grid-2">
+    {% for step in imprint.readingSteps %}
+    <article class="cr-card">
+      <div style="display: flex; align-items: center; gap: 0.65rem;">
+        <span class="cr-step-number" aria-hidden="true">{{ step.stepNumber }}</span>
+        <span class="cr-route-badge" style="margin: 0;">{{ step.guide }}</span>
+      </div>
+      <h2 class="cr-card-title">{{ step.heading }}</h2>
+      <p class="cr-card-body">{{ step.detail }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="cr-section" aria-labelledby="imprints-heading">
+  <div class="cr-section-header">
+    <h2 id="imprints-heading" class="cr-section-title">How Our Imprints Work Together</h2>
+    <p class="cr-card-body">
+      Rowan and Iris coordinate closely with Isabel, Eleanor, Sophia, and Oliver at Ocean View Archives
+      so every kind of story has its natural home.
+    </p>
+  </div>
+
+  <div class="cr-grid-3">
+    {% for sib in imprint.siblingImprints %}
+    <article class="cr-card">
+      <span class="cr-route-badge">{{ sib.badge }}</span>
+      <h3 class="cr-card-title">{{ sib.name }}</h3>
+      <p class="cr-card-body">{{ sib.description }}</p>
+      <div class="cr-actions">
+        <a href="{{ sib.href }}" class="cr-btn cr-btn-secondary">{{ sib.cta }} →</a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>

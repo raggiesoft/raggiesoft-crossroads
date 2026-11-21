@@ -1,0 +1,231 @@
+<!doctype html>
+<!--
+  RaggieSoft Story Crossroads (https://crossroads.raggiesoft.com)
+  Built with Eleventy v3 Static HTML Templates and Google Lit 3 Custom Elements.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+    <!-- Native OS Light & Dark Color Scheme + Synchronous Zero-Flash Override Restorer -->
+    <meta name="color-scheme" content="light dark" />
+    <script>
+      try {
+        var s = localStorage.getItem('color-scheme');
+        if (s === 'light' || s === 'dark') {
+          document.querySelector('meta[name="color-scheme"]').content = s;
+        }
+      } catch (e) {}
+    </script>
+
+    <meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#07131a" media="(prefers-color-scheme: dark)" />
+
+    <title>Trail Not Found (404) | RaggieSoft Story Crossroads</title>
+    <meta name="description" content="That footpath isn&#39;t on our valley map yet—step back to the RaggieSoft Story Crossroads signpost." />
+    
+    <meta name="robots" content="noindex, follow" />
+    
+
+    <!-- OpenGraph & Social Preview Metadata -->
+    <meta property="og:site_name" content="RaggieSoft Story Crossroads" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Trail Not Found (404) | RaggieSoft Story Crossroads" />
+    <meta property="og:description" content="That footpath isn&#39;t on our valley map yet—step back to the RaggieSoft Story Crossroads signpost." />
+    <meta property="og:url" content="https://crossroads.raggiesoft.com/404.html" />
+    <meta property="og:image" content="https://assets.raggiesoft.com/raggiesoft-books/images/covers/og/story-crossroads-imprint.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="675" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Trail Not Found (404) | RaggieSoft Story Crossroads" />
+    <meta name="twitter:description" content="That footpath isn&#39;t on our valley map yet—step back to the RaggieSoft Story Crossroads signpost." />
+    <meta name="twitter:image" content="https://assets.raggiesoft.com/raggiesoft-books/images/covers/og/story-crossroads-imprint.jpg" />
+
+    <link rel="icon" type="image/svg+xml" href="https://assets.raggiesoft.com/raggiesoft-books/images/logos/story-crossroads-seal-3way.svg" />
+
+    <!-- Shared RaggieSoft Network Chrome + Story Crossroads Compass Stylesheet -->
+    <link rel="stylesheet" href="https://assets.raggiesoft.com/common/css/raggiesoft-network.css" />
+    <link rel="stylesheet" href="/assets/crossroads.css" />
+
+    
+  </head>
+  <body>
+    <a href="#main-content" class="cr-skip-link">Skip to main content</a>
+
+    <!-- Universal RaggieSoft Ecosystem Bar (Progressively enhanced by raggiesoft-network.js) -->
+    <nav class="rs-network-bar" aria-label="RaggieSoft Ecosystem Network">
+      <div class="rs-network-bar-inner">
+        <span class="rs-network-label">✦ RaggieSoft Network:</span>
+        <ul class="rs-network-links">
+          <li><a href="https://raggiesoft.com">🌐 Hub</a></li>
+          <li><a href="https://books.raggiesoft.com">📚 Ocean View Archives</a></li>
+          <li><a href="https://crossroads.raggiesoft.com" aria-current="page" class="is-active">🧭 Story Crossroads</a></li>
+          <li><a href="https://cedarrun.raggiesoft.com">🌲 Cedar Run</a></li>
+          <li><a href="https://music.raggiesoft.com">🎧 The Listening Room</a></li>
+          <li><a href="https://backstage.raggiesoft.com">🎬 Backstage</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Primary Story Crossroads Imprint Header & Navigation -->
+    <header class="cr-header">
+      <div class="cr-container cr-header-inner">
+        <a href="/" class="cr-brand">
+          <img
+            src="https://assets.raggiesoft.com/raggiesoft-books/images/logos/story-crossroads-seal-3way.svg"
+            alt=""
+            width="46"
+            height="46"
+            class="cr-brand-seal"
+          />
+          <span>
+            <span class="cr-brand-title">RaggieSoft Story Crossroads</span>
+            <span class="cr-brand-subtitle">Interactive Branching Novels • Coequal Routes</span>
+          </span>
+        </a>
+
+        <div class="cr-nav-row">
+          <nav aria-label="Story Crossroads Imprint">
+            <ul class="cr-nav-list">
+              
+              <li>
+                <a
+                  href="/"
+                  class="cr-nav-link"
+                  
+                >Signpost Home</a>
+              </li>
+              
+              <li>
+                <a
+                  href="/architects"
+                  class="cr-nav-link"
+                  
+                >Rowan &amp; Iris</a>
+              </li>
+              
+              <li>
+                <a
+                  href="/how-it-works"
+                  class="cr-nav-link"
+                  
+                >How It Works</a>
+              </li>
+              
+              <li>
+                <a
+                  href="/seals"
+                  class="cr-nav-link"
+                  
+                >2-Way &amp; 3-Way Seals</a>
+              </li>
+              
+              <li>
+                <a
+                  href="/catalog"
+                  class="cr-nav-link"
+                  
+                >Bookshelf</a>
+              </li>
+              
+              <li>
+                <a
+                  href="/sandbox"
+                  class="cr-nav-link"
+                  
+                >Try a Crossroads</a>
+              </li>
+              
+            </ul>
+          </nav>
+
+          <!-- Two-state comfort reading-light toggle (Sunlit Parchment vs. Midnight Compass) -->
+          <button type="button" id="cr-reading-light-toggle" class="cr-theme-btn">
+            <span class="cr-theme-to-dark">
+              <span aria-hidden="true">🌙</span>
+              <span>Night Lamp</span>
+            </span>
+            <span class="cr-theme-to-light">
+              <span aria-hidden="true">☀️</span>
+              <span>Daylight Page</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="cr-main" tabindex="-1">
+      <div class="cr-container">
+        
+
+<section class="cr-section cr-mt-0" aria-labelledby="not-found-heading">
+  <span class="cr-eyebrow">
+    <span aria-hidden="true">🧭</span>
+    <span>404 • Uncharted Trail</span>
+  </span>
+  <h1 id="not-found-heading" class="cr-hero-title">This Footpath Leads Off the Map</h1>
+  <p class="cr-lead">
+    We couldn’t find a page at that address, but the main signpost is right behind you—choose a
+    destination below to continue exploring RaggieSoft Story Crossroads.
+  </p>
+  <div class="cr-actions">
+    <a href="/" class="cr-btn cr-btn-primary">Return to Story Crossroads Home</a>
+    <a href="/catalog" class="cr-btn cr-btn-secondary">Browse Story Crossroads Bookshelf</a>
+    <a href="https://books.raggiesoft.com/cedar-run" class="cr-btn cr-btn-secondary">Read Cedar Run</a>
+  </div>
+</section>
+
+      </div>
+    </main>
+
+    <!-- Global Imprint Footer with Mandatory Fictitious Disclaimer & Creative Commons Licensing -->
+    <footer class="cr-footer">
+      <div class="cr-container">
+        <div class="cr-footer-grid">
+          <div>
+            <h2 class="cr-card-title">RaggieSoft Story Crossroads</h2>
+            <p class="cr-card-body">
+              An unincorporated creative publishing imprint by Michael P. Ragsdale dedicated to
+              standalone interactive novels where every choice opens a full-hearted literary route.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="cr-card-title">Explore the Library</h2>
+            <ul class="cr-nav-list">
+              <li><a href="https://books.raggiesoft.com/cedar-run" class="cr-nav-link">📚 Read Cedar Run</a></li>
+              <li><a href="https://cedarrun.raggiesoft.com" class="cr-nav-link">🌲 Cedar Run Field Guide</a></li>
+              <li><a href="https://books.raggiesoft.com" class="cr-nav-link">🌊 Ocean View Archives</a></li>
+              <li><a href="https://backstage.raggiesoft.com" class="cr-nav-link">🎬 RaggieSoft Backstage</a></li>
+              <li><a href="https://music.raggiesoft.com" class="cr-nav-link">🎧 The Listening Room</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="cr-card-title">Creative Licensing</h2>
+            <p class="cr-card-body">
+              Story narratives and illustrations are shared under
+              <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> alongside
+              commercial licensing via
+              <a href="https://raggiesoft.com/raggiesoft-media/licensing/commercial">RaggieSoft Media</a>.
+            </p>
+          </div>
+        </div>
+
+        <div class="cr-disclaimer-box" role="note" aria-label="Fictitious Persons and Entities Disclaimer">
+          <strong>Work of Fiction Disclaimer:</strong> All RaggieSoft Story Crossroads and Ocean View
+          Archives characters, families, musical artists, universities (including CPI, VDU, The Forgers,
+          and The Crucible), corporations (including OmniCorp, Apex Records, Prairie Coachworks, and
+          Sainte-Claire), transit agencies (BRT, CVTA), in-universe legal filings, and story events are
+          works of fiction. Any resemblance to actual persons, living or dead, or real-world entities is
+          purely coincidental.
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://assets.raggiesoft.com/common/js/raggiesoft-network.js" defer></script>
+    <script type="module" src="/assets/crossroads-islands.js"></script>
+  </body>
+</html>

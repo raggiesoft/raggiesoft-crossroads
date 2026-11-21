@@ -1,0 +1,32 @@
+---
+layout: base.njk
+permalink: /sandbox/index.html
+canonicalPath: "/sandbox"
+seoTitle: "Interactive Story Crossroads Preview | Try a Route"
+seoDescription: "Step up to the lantern signpost in our live Story Crossroads preview—test a 3-Way and 2-Way Crossroads right in your browser before reading."
+---
+{#
+  ============================================================================
+  src/site/sandbox.njk — Standalone Interactive Sampler (`https://crossroads.raggiesoft.com/sandbox`)
+  ============================================================================
+  PLAIN-ENGLISH OVERVIEW:
+    Provides a distraction-free page dedicated to our `<crossroads-live-sandbox>`
+    widget so readers can explore all six coequal mini-endings (`1A`, `1B`, `2A`,
+    `2B`, `3A`, `3B`) and test signpost breadcrumb navigation!
+  ============================================================================
+#}
+
+<section class="cr-section cr-mt-0" aria-labelledby="sandbox-page-heading">
+  <span class="cr-eyebrow">
+    <span aria-hidden="true">🧭</span>
+    <span>Six Coequal Destinations • Zero Dead Ends</span>
+  </span>
+  <h1 id="sandbox-page-heading" class="cr-hero-title">Try a Live Story Crossroads</h1>
+  <p class="cr-lead">
+    Every trail below leads through both a <strong>3-Way Crossroads</strong> and a
+    <strong>2-Way Crossroads</strong> into one of six peaceful twilight scenes. Use the trail pills
+    at the top of the card anytime to hop back to an earlier signpost!
+  </p>
+
+  <crossroads-live-sandbox></crossroads-live-sandbox>
+</section>

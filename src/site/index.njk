@@ -1,0 +1,184 @@
+---
+layout: base.njk
+permalink: /index.html
+canonicalPath: ""
+seoTitle: "RaggieSoft Story Crossroads | Interactive Novels"
+seoDescription: "Step onto the porch with Crossroads Architects Rowan and Iris Hawthorne to explore RaggieSoft Story Crossroads interactive branching novels."
+---
+{#
+  ============================================================================
+  src/site/index.njk — Imprint Home Page (`https://crossroads.raggiesoft.com/`)
+  ============================================================================
+  PLAIN-ENGLISH OVERVIEW:
+    Welcomes visitors to the Lantern Signpost Conservatory alongside brother and
+    sister Crossroads Architects Rowan & Iris Hawthorne, embeds our live Lit 3
+    `<crossroads-live-sandbox>` Custom Element, and spotlights *Cedar Run*!
+  ============================================================================
+#}
+
+<section class="cr-hero" aria-labelledby="hero-heading">
+  <div>
+    <span class="cr-eyebrow">
+      <span aria-hidden="true">🧭</span>
+      <span>RaggieSoft Interactive Fiction Imprint</span>
+    </span>
+    <h1 id="hero-heading" class="cr-hero-title">
+      Where Every Fork in the Trail Opens a Complete Story.
+    </h1>
+    <p class="cr-lead">
+      Welcome to <strong>RaggieSoft Story Crossroads</strong>—tended by brother-and-sister Crossroads
+      Architects <strong>Rowan &amp; Iris Hawthorne</strong>. Every option at a Crossroads leads into a
+      rich, full-length literary route with zero trick endings or dead ends.
+    </p>
+    <div class="cr-actions">
+      <a href="https://books.raggiesoft.com/cedar-run" class="cr-btn cr-btn-primary">
+        <span aria-hidden="true">📚</span>
+        <span>Read Cedar Run Now</span>
+      </a>
+      <a href="#live-crossroads-preview" class="cr-btn cr-btn-secondary">
+        <span aria-hidden="true">🧭</span>
+        <span>Try Rowan’s Live Signpost</span>
+      </a>
+      <a href="/architects" class="cr-btn cr-btn-secondary">
+        <span aria-hidden="true">✦</span>
+        <span>Meet Rowan &amp; Iris</span>
+      </a>
+    </div>
+  </div>
+
+  <figure class="cr-hero-media">
+    <img
+      src="{{ imprint.heroImage }}"
+      alt="Antique brass and deep teal compass beside an open journal and glowing lantern overlooking a twilight stone trail splitting into three lantern-lit paths toward a cedar creek, a starlit ridge beneath the Milky Way, and distant coastal lights"
+      width="1200"
+      height="675"
+      fetchpriority="high"
+    />
+    <figcaption class="cr-hero-caption">
+      View from the Lantern Signpost Conservatory—three inviting trails, zero wrong answers.
+    </figcaption>
+  </figure>
+</section>
+
+<section class="cr-section" aria-labelledby="hosts-heading">
+  <div class="cr-book-showcase" style="grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); align-items: center;">
+    <figure class="cr-hero-media">
+      <img
+        src="{{ imprint.architectsImage }}"
+        alt="Rowan Hawthorne with his brass compass and open trail map standing beside his sister Iris Hawthorne holding a leather-bound novel on the lantern-lit stone porch"
+        width="1200"
+        height="675"
+        loading="lazy"
+      />
+      <figcaption class="cr-hero-caption">
+        Rowan &amp; Iris Hawthorne, your guides to every Story Crossroads signpost and medallion.
+      </figcaption>
+    </figure>
+
+    <div>
+      <span class="cr-eyebrow">
+        <span aria-hidden="true">✦</span>
+        <span>Your Guides at the Signpost</span>
+      </span>
+      <h2 id="hosts-heading" class="cr-section-title">Built by Brother &amp; Sister Architects</h2>
+      <p class="cr-card-body" style="margin-bottom: 0.9rem;">
+        {{ imprint.architects.introQuote }}
+      </p>
+      <p class="cr-card-body" style="margin-bottom: 1.25rem;">
+        <strong>Rowan</strong> maps the diverging trails so every option leads to a true horizon, while
+        <strong>Iris</strong> stamps the 2-Way and 3-Way Compass Medallions and keeps every route’s
+        memory intact.
+      </p>
+      <div class="cr-actions">
+        <a href="/architects" class="cr-btn cr-btn-secondary">Meet Rowan &amp; Iris →</a>
+        <a href="/how-it-works" class="cr-btn cr-btn-secondary">How the Crossroads Works →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cr-section" aria-labelledby="pillars-heading">
+  <div class="cr-section-header">
+    <h2 id="pillars-heading" class="cr-section-title">The Story Crossroads Promise</h2>
+    <p class="cr-card-body">
+      Why Rowan and Iris built a dedicated home alongside Ocean View Archives specifically for branching novels.
+    </p>
+  </div>
+
+  <div class="cr-grid-2">
+    {% for pillar in imprint.pillars %}
+    <article class="cr-card">
+      <span class="cr-card-icon" aria-hidden="true">{{ pillar.icon }}</span>
+      <h3 class="cr-card-title">{{ pillar.title }}</h3>
+      <p class="cr-card-body">{{ pillar.summary }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="live-crossroads-preview" class="cr-section" aria-labelledby="preview-heading">
+  <div class="cr-section-header">
+    <span class="cr-eyebrow">
+      <span aria-hidden="true">🧭</span>
+      <span>Guided by Rowan &amp; Iris</span>
+    </span>
+    <h2 id="preview-heading" class="cr-section-title">Step Up to the Signpost</h2>
+    <p class="cr-card-body">
+      Rowan set three lanterns out on the evening trail so you can feel how a Story Crossroads works in
+      real time—pick a 3-Way trail, follow it into a 2-Way Crossroads, and use Iris’s trail pills to
+      step back anytime.
+    </p>
+  </div>
+
+  <crossroads-live-sandbox></crossroads-live-sandbox>
+</section>
+
+<section class="cr-section" aria-labelledby="flagship-heading">
+  <div class="cr-section-header">
+    <span class="cr-eyebrow">
+      <span aria-hidden="true">🌲</span>
+      <span>Inaugural 3-Way Edition</span>
+    </span>
+    <h2 id="flagship-heading" class="cr-section-title">Featured Edition: Cedar Run</h2>
+  </div>
+
+  {% for book in imprint.editions %}
+  <article class="cr-book-showcase">
+    <img
+      src="{{ book.cover2x3 }}"
+      alt="{{ book.title }} book cover featuring Iris’s circular 3-Way Story Crossroads medallion"
+      width="260"
+      height="390"
+      loading="lazy"
+      class="cr-book-cover"
+    />
+    <div>
+      <span class="cr-eyebrow">{{ book.directionsLabel }} • {{ book.eraLabel }}</span>
+      <h3 class="cr-section-title cr-mt-0">{{ book.title }} — {{ book.subtitle }}</h3>
+      <p class="cr-card-body" style="margin-bottom: 0.85rem;">{{ book.synopsis }}</p>
+      <p class="cr-card-body"><em>{{ book.architectNote }}</em></p>
+
+      <ul class="cr-route-list" aria-label="Three Crossroads routes in {{ book.title }}">
+        {% for route in book.routes %}
+        <li class="cr-route-item">
+          <span class="cr-route-badge">{{ route.badge }}</span>
+          <strong>{{ route.name }}</strong>
+          <p class="cr-card-body">{{ route.summary }}</p>
+        </li>
+        {% endfor %}
+      </ul>
+
+      <div class="cr-actions">
+        <a href="{{ book.readUrl }}" class="cr-btn cr-btn-primary">
+          <span aria-hidden="true">📖</span>
+          <span>Start Reading Cedar Run</span>
+        </a>
+        <a href="{{ book.worldUrl }}" class="cr-btn cr-btn-secondary">
+          <span aria-hidden="true">🌲</span>
+          <span>Explore Cedar Run World Guide</span>
+        </a>
+      </div>
+    </div>
+  </article>
+  {% endfor %}
+</section>

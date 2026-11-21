@@ -1,0 +1,31 @@
+---
+layout: base.njk
+permalink: /404.html
+canonicalPath: "/404.html"
+noindex: true
+eleventyExcludeFromCollections: true
+seoTitle: "Trail Not Found (404) | RaggieSoft Story Crossroads"
+seoDescription: "That footpath isn't on our valley map yet—step back to the RaggieSoft Story Crossroads signpost."
+---
+{#
+  ============================================================================
+  src/site/404.njk — Genuine HTTP 404 Error Page (`noindex, follow`)
+  ============================================================================
+#}
+
+<section class="cr-section cr-mt-0" aria-labelledby="not-found-heading">
+  <span class="cr-eyebrow">
+    <span aria-hidden="true">🧭</span>
+    <span>404 • Uncharted Trail</span>
+  </span>
+  <h1 id="not-found-heading" class="cr-hero-title">This Footpath Leads Off the Map</h1>
+  <p class="cr-lead">
+    We couldn’t find a page at that address, but the main signpost is right behind you—choose a
+    destination below to continue exploring RaggieSoft Story Crossroads.
+  </p>
+  <div class="cr-actions">
+    <a href="/" class="cr-btn cr-btn-primary">Return to Story Crossroads Home</a>
+    <a href="/catalog" class="cr-btn cr-btn-secondary">Browse Story Crossroads Bookshelf</a>
+    <a href="https://books.raggiesoft.com/cedar-run" class="cr-btn cr-btn-secondary">Read Cedar Run</a>
+  </div>
+</section>
