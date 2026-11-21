@@ -245,6 +245,9 @@
     background-color: var(--cr-surface);
     border-bottom: 2px solid var(--cr-border);
     padding-block: 0.85rem;
+    position: sticky;
+    top: 0;
+    z-index: 60;
   }
 
   .cr-header-inner {
@@ -327,6 +330,39 @@
     background-color: var(--cr-badge-bg);
     color: var(--cr-badge-fg);
     border-color: var(--cr-border);
+  }
+
+  @media (max-width: 767.98px) {
+    .cr-header {
+      padding-block: 0.42rem;
+    }
+
+    .cr-header-inner {
+      gap: 0.5rem;
+    }
+
+    .cr-brand-seal {
+      width: 34px;
+      height: 34px;
+    }
+
+    .cr-brand-title {
+      font-size: 1rem;
+    }
+
+    .cr-brand-subtitle {
+      display: none;
+    }
+
+    .cr-nav-list {
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+    }
+
+    .cr-nav-link {
+      width: 100%;
+    }
   }
 
   .cr-main {
