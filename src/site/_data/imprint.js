@@ -252,7 +252,7 @@ export default {
       directionsCount: 3,
       eraLabel: '1980s Fantasy Realm of Vaeloria • Twin Moons',
       architectNote:
-        'Rowan & Iris’s Field Note: “Two days before Gwen turned eighteen, fellow travelers at the Norfolk bus station pushed Nolan’s abusive Ike Street ex away when twenty-three-year-old Nolan (5\'7") refused a one-way cross-country ticket so he could go home to Emerald Creek in Chesapeake for his kid sister’s birthday. Grandpa Walter held on to see Gwen turn eighteen—where an overjoyed Gwen accepted Nolan’s invite to live together—before passing away the next day, leaving Nolan to handle Grandpa’s estate, sell the house, and share his tiny one-person studio box with Gwen until Vaeloria called them across the stars.”',
+        'Rowan & Iris’s Field Note: “Two days before Gwen turned eighteen, fellow travelers at the Norfolk bus station pushed Nolan’s abusive ex away when twenty-three-year-old Nolan (5\'7") refused a one-way cross-country ticket so he could go home to Emerald Creek in Chesapeake for his kid sister’s birthday. Grandpa Walter held on to see Gwen turn eighteen—where an overjoyed Gwen accepted Nolan’s invite to live together—before passing away the next day, leaving Nolan to handle Grandpa’s estate, sell the house, and share his tiny one-person studio box with Gwen until Vaeloria called them across the stars.”',
       cover2x3: `${CDN_BASE}/raggiesoft-books/images/covers/2x3/waystation.jpg`,
       coverOg: `${CDN_BASE}/raggiesoft-books/images/covers/og/waystation.jpg`,
       sealUrl: `${CDN_BASE}/raggiesoft-books/images/logos/story-crossroads-seal-3way.svg`,
