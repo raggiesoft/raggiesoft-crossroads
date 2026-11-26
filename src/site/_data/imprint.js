@@ -252,14 +252,14 @@ export default {
       directionsCount: 3,
       eraLabel: '1980s Fantasy Realm of Vaeloria • Twin Moons',
       architectNote:
-        'Rowan & Iris’s Field Note: “After losing their grandfather the day before Gwen turned eighteen, twenty-four-year-old Nolan (5\'7") and his six-foot-one sister Gwen Lennox (19) scraped by together in a tiny studio apartment—until Vaeloria’s sleeping Astrolabe answered Gwen’s wish, calling two inseparable hearts on forearm crutches to heal The Great Drift and find a forever home they never want to leave.”',
+        'Rowan & Iris’s Field Note: “Fresh out of an abusive relationship and starting over in a tiny one-person studio box, twenty-three-year-old Nolan (5\'7") rushed his six-foot-one sister Gwen (turning 18) home when their grandfather died—and Gwen never left his side. A year later, dropped barefoot in Vaeloria’s distant borderlands on forearm crutches, they must journey together, camp curled up under Grandpa’s blanket, and heal The Great Drift to earn their glowing-archway home.”',
       cover2x3: `${CDN_BASE}/raggiesoft-books/images/covers/2x3/waystation.jpg`,
       coverOg: `${CDN_BASE}/raggiesoft-books/images/covers/og/waystation.jpg`,
       sealUrl: `${CDN_BASE}/raggiesoft-books/images/logos/story-crossroads-seal-3way.svg`,
       readUrl: 'https://books.raggiesoft.com/waystation',
       worldUrl: 'https://waystation.raggiesoft.com',
       synopsis:
-        'Twenty-four-year-old Nolan Lennox and his tall nineteen-year-old sister Gwen tumble barefoot in jeans and cotton t-shirts from their one-room studio sofa-bed into the painted twin-moon borderlands of Vaeloria with Grandpa Walter’s plaid blanket and four ergonomic Lofstrand forearm crutches—choosing at every Story Crossroads which gentle 1980s-fantasy road carries them inward to re-harmonize the Bronze Astrolabe.',
+        'Twenty-four-year-old Nolan Lennox and his tall nineteen-year-old sister Gwen tumble barefoot in jeans and cotton t-shirts off their shared full-sized studio bed into the distant twin-moon borderlands of Vaeloria with Grandpa Walter’s plaid blanket and four ergonomic Lofstrand forearm crutches—choosing at every Story Crossroads which gentle 1980s-fantasy road carries them inward to earn the Uncharted Waystation.',
       routes: [
         {
           badge: 'Option 1 • Waterway Lanterns',
