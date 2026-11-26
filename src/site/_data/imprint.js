@@ -247,19 +247,19 @@ export default {
     {
       slug: 'waystation',
       title: 'The Uncharted Waystation',
-      subtitle: 'Book One: Beyond the Living-Room Rift',
+      subtitle: 'Book One: Beyond the Studio Rift',
       directionsLabel: '3-Way Story Crossroads Edition',
       directionsCount: 3,
       eraLabel: '1980s Fantasy Realm of Vaeloria • Twin Moons',
       architectNote:
-        'Rowan & Iris’s Field Note: “Pulled barefoot off their living-room sofa with their forearm crutches and plaid throw blanket—while both wheelchairs stayed behind on Earth—brother Nolan (5\'7") and his six-foot-one sister Gwen Lennox set out across a 1980s fantasy world so welcoming that, by the end of their long road to the Waystation balcony, they never want to go back.”',
+        'Rowan & Iris’s Field Note: “After losing their grandfather the day before Gwen turned eighteen, twenty-four-year-old Nolan (5\'7") and his six-foot-one sister Gwen Lennox (19) scraped by together in a tiny studio apartment—until Vaeloria’s sleeping Astrolabe answered Gwen’s wish, calling two inseparable hearts on forearm crutches to heal The Great Drift and find a forever home they never want to leave.”',
       cover2x3: `${CDN_BASE}/raggiesoft-books/images/covers/2x3/waystation.jpg`,
       coverOg: `${CDN_BASE}/raggiesoft-books/images/covers/og/waystation.jpg`,
       sealUrl: `${CDN_BASE}/raggiesoft-books/images/logos/story-crossroads-seal-3way.svg`,
       readUrl: 'https://books.raggiesoft.com/waystation',
       worldUrl: 'https://waystation.raggiesoft.com',
       synopsis:
-        'Twenty-year-old Nolan Lennox and his tall nineteen-year-old sister Gwen tumble barefoot in jeans and cotton t-shirts from their apartment sofa into the painted twin-moon borderlands of Vaeloria with only four ergonomic forearm crutches and a wool-blend blanket—choosing at every Story Crossroads which gentle 1980s-fantasy road carries them deeper toward their forever home.',
+        'Twenty-four-year-old Nolan Lennox and his tall nineteen-year-old sister Gwen tumble barefoot in jeans and cotton t-shirts from their one-room studio sofa-bed into the painted twin-moon borderlands of Vaeloria with Grandpa Walter’s plaid blanket and four ergonomic Lofstrand forearm crutches—choosing at every Story Crossroads which gentle 1980s-fantasy road carries them inward to re-harmonize the Bronze Astrolabe.',
       routes: [
         {
           badge: 'Option 1 • Waterway Lanterns',
