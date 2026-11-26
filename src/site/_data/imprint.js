@@ -252,7 +252,7 @@ export default {
       directionsCount: 3,
       eraLabel: '1980s Fantasy Realm of Vaeloria • Twin Moons',
       architectNote:
-        'Rowan & Iris’s Field Note: “Fresh out of an abusive relationship and starting over in a tiny one-person studio box, twenty-three-year-old Nolan (5\'7") rushed his six-foot-one sister Gwen (turning 18) home when their grandfather died—and Gwen never left his side. A year later, dropped barefoot in Vaeloria’s distant borderlands on forearm crutches, they must journey together, camp curled up under Grandpa’s blanket, and heal The Great Drift to earn their glowing-archway home.”',
+        'Rowan & Iris’s Field Note: “Three weeks before Gwen turned eighteen, fellow travelers at the Norfolk bus station helped push Nolan’s abusive ex away when twenty-three-year-old Nolan (5\'7") refused a one-way cross-country ticket so he could go home to Chesapeake for his kid sister’s birthday. Days later, when Grandpa Walter died, Nolan rushed six-foot-one Gwen into his tiny one-person studio box—and Gwen never left his side. A year later, dropped barefoot in Vaeloria’s borderlands on forearm crutches, they must journey together, camp curled up under Grandpa’s blanket, and heal The Great Drift to earn their glowing-archway home.”',
       cover2x3: `${CDN_BASE}/raggiesoft-books/images/covers/2x3/waystation.jpg`,
       coverOg: `${CDN_BASE}/raggiesoft-books/images/covers/og/waystation.jpg`,
       sealUrl: `${CDN_BASE}/raggiesoft-books/images/logos/story-crossroads-seal-3way.svg`,
