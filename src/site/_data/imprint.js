@@ -190,9 +190,9 @@ export default {
     {
       stepNumber: '03',
       guide: 'Iris’s Continuity Note',
-      heading: 'Live Inside Your Chosen Route',
+      heading: 'Live Inside Your Chosen Route—Even When Trails Rejoin',
       detail:
-        'Your table of contents and Next Chapter links automatically follow the route you chose across web, desktop, tablet, and phone—with zero cross-trail confusion.'
+        'Your table of contents, Next Chapter links, and even later scenes and illustrations remember what your characters lived through—whether their earlier road brought quiet peace or hard-won comfort.'
     },
     {
       stepNumber: '04',
@@ -247,19 +247,19 @@ export default {
     {
       slug: 'waystation',
       title: 'The Uncharted Waystation',
-      subtitle: 'Book One: Beyond the Studio Rift',
+      subtitle: 'Book One: Tidewater and Studio 205 • Book Two: Vaeloria',
       directionsLabel: '3-Way Story Crossroads Edition',
       directionsCount: 3,
-      eraLabel: '1980s Fantasy Realm of Vaeloria • Twin Moons',
+      eraLabel: '1999–2002 Tidewater Virginia & Twin-Moon Vaeloria',
       architectNote:
-        'Rowan & Iris’s Field Note: “Two days before Gwen turned eighteen—when Nolan’s abusive ex dragged him to the Norfolk bus station on a day-of whim without even calling 48 hours ahead for a wheelchair-accessible coach—twenty-three-year-old Nolan (5\'7") stopped his wheelchair before she reached the walk-up ticket counter to break up with her, and fellow passengers pushed her away after she smacked him so he could ride home to Emerald Creek for his sister and dying grandfather. Grandpa Walter held on for Gwen’s eighteenth birthday—where an overjoyed Gwen accepted Nolan’s invite to live together—before passing away the next day, leaving Nolan to handle Grandpa’s estate, sell the house, and share his tiny one-person studio box with Gwen until Vaeloria called them across the stars.”',
+        'Rowan & Iris’s Field Note: “Two months before Gwen turned eighteen—when Nolan’s controlling ex dragged him to the Norfolk bus station on a Tuesday-morning whim without calling forty-eight hours ahead for a wheelchair-accessible coach—your choices across Book One decide whether twenty-three-year-old Nolan breaks free in Norfolk and rides home in kind cabbie Denise Carter’s taxi, or endures the westbound Pathfinder route until sister Gwen and supervisor Mallory Walsh bring him home. Every Book One trail leads Nolan, Gwen, and Mallory together into Studio 205 and across the amber rift into Vaeloria—and Book Two’s nights and illustrations remember everything Nolan lived through on the way there.”',
       cover2x3: `${CDN_BASE}/raggiesoft-books/images/covers/2x3/waystation.jpg`,
       coverOg: `${CDN_BASE}/raggiesoft-books/images/covers/og/waystation.jpg`,
       sealUrl: `${CDN_BASE}/raggiesoft-books/images/logos/story-crossroads-seal-3way.svg`,
       readUrl: 'https://books.raggiesoft.com/waystation',
       worldUrl: 'https://waystation.raggiesoft.com',
       synopsis:
-        'Twenty-four-year-old Nolan Lennox and his tall nineteen-year-old sister Gwen tumble barefoot in jeans and cotton t-shirts off their shared full-sized studio bed into the distant twin-moon borderlands of Vaeloria with Grandpa Walter’s plaid blanket and four ergonomic Lofstrand forearm crutches—choosing at every Story Crossroads which gentle 1980s-fantasy road carries them inward to earn the Uncharted Waystation.',
+        'After surviving two turbulent years in Tidewater Virginia and rebuilding side by side in a tiny Norfolk high-rise studio, twenty-four-year-old Nolan Lennox, his tall nineteen-year-old sister Gwen, and his girlfriend Mallory Walsh tumble barefoot off Studio 205’s bed into the twin-moon borderlands of Vaeloria—choosing at every Story Crossroads which gentle 1980s-fantasy road carries all three of them home to Keepers’ Hall.',
       routes: [
         {
           badge: 'Option 1 • Waterway Lanterns',
