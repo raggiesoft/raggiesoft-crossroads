@@ -3,7 +3,7 @@ layout: base.njk
 permalink: /catalog/index.html
 canonicalPath: "/catalog"
 seoTitle: "Story Crossroads Bookshelf | Interactive Editions"
-seoDescription: "Browse published RaggieSoft Story Crossroads interactive novels, starting with Cedar Run—our three-route Pacific Northwest wilderness story."
+seoDescription: "Browse RaggieSoft Story Crossroads interactive novels, featuring The Uncharted Waystation and Cedar Run—free in RaggieSoft Book Reader."
 ---
 {#
   ============================================================================
@@ -11,8 +11,8 @@ seoDescription: "Browse published RaggieSoft Story Crossroads interactive novels
   ============================================================================
   PLAIN-ENGLISH OVERVIEW:
     Displays all published RaggieSoft Story Crossroads interactive editions with
-    direct links to RaggieSoft Book Reader (`books.raggiesoft.com`) and companion
-    world guides.
+    direct links to RaggieSoft Book Reader (`books.raggiesoft.com`) and each
+    book's companion world portal (`waystation.raggiesoft.com` & `cedarrun.raggiesoft.com`).
   ============================================================================
 #}
 
@@ -39,7 +39,8 @@ seoDescription: "Browse published RaggieSoft Story Crossroads interactive novels
     <div>
       <span class="cr-eyebrow">{{ book.directionsLabel }} • {{ book.eraLabel }}</span>
       <h2 class="cr-section-title cr-mt-0">{{ book.title }}: {{ book.subtitle }}</h2>
-      <p class="cr-card-body">{{ book.synopsis }}</p>
+      <p class="cr-card-body" style="margin-bottom: 0.85rem;">{{ book.synopsis }}</p>
+      <p class="cr-card-body"><em>{{ book.architectNote }}</em></p>
 
       <ul class="cr-route-list" aria-label="Routes available in {{ book.title }}">
         {% for route in book.routes %}
@@ -54,11 +55,11 @@ seoDescription: "Browse published RaggieSoft Story Crossroads interactive novels
       <div class="cr-actions">
         <a href="{{ book.readUrl }}" class="cr-btn cr-btn-primary">
           <span aria-hidden="true">📖</span>
-          <span>Open in RaggieSoft Book Reader</span>
+          <span>Read {{ book.title }} in Book Reader</span>
         </a>
         <a href="{{ book.worldUrl }}" class="cr-btn cr-btn-secondary">
-          <span aria-hidden="true">🌲</span>
-          <span>Visit Cedar Run Valley Guide</span>
+          <span aria-hidden="true">{{ book.worldIcon }}</span>
+          <span>{{ book.worldLabel }}</span>
         </a>
       </div>
     </div>

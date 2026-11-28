@@ -3,7 +3,7 @@ layout: base.njk
 permalink: /index.html
 canonicalPath: ""
 seoTitle: "RaggieSoft Story Crossroads | Interactive Novels"
-seoDescription: "Step onto the porch with Crossroads Architects Rowan and Iris Hawthorne to explore RaggieSoft Story Crossroads interactive branching novels."
+seoDescription: "Explore RaggieSoft Story Crossroads interactive novels with Rowan and Iris Hawthorne—featuring The Uncharted Waystation and Cedar Run."
 ---
 {#
   ============================================================================
@@ -12,7 +12,8 @@ seoDescription: "Step onto the porch with Crossroads Architects Rowan and Iris H
   PLAIN-ENGLISH OVERVIEW:
     Welcomes visitors to the Lantern Signpost Conservatory alongside brother and
     sister Crossroads Architects Rowan & Iris Hawthorne, embeds our live Lit 3
-    `<crossroads-live-sandbox>` Custom Element, and spotlights *Cedar Run*!
+    `<crossroads-live-sandbox>` Custom Element, and co-spotlights both
+    *The Uncharted Waystation* and *Cedar Run*!
   ============================================================================
 #}
 
@@ -31,9 +32,13 @@ seoDescription: "Step onto the porch with Crossroads Architects Rowan and Iris H
       rich, full-length literary route with zero trick endings or dead ends.
     </p>
     <div class="cr-actions">
+      <a href="https://books.raggiesoft.com/waystation" class="cr-btn cr-btn-primary">
+        <span aria-hidden="true">🔮</span>
+        <span>Read The Uncharted Waystation</span>
+      </a>
       <a href="https://books.raggiesoft.com/cedar-run" class="cr-btn cr-btn-primary">
-        <span aria-hidden="true">📚</span>
-        <span>Read Cedar Run Now</span>
+        <span aria-hidden="true">🌲</span>
+        <span>Read Cedar Run</span>
       </a>
       <a href="#live-crossroads-preview" class="cr-btn cr-btn-secondary">
         <span aria-hidden="true">🧭</span>
@@ -136,10 +141,10 @@ seoDescription: "Step onto the porch with Crossroads Architects Rowan and Iris H
 <section class="cr-section" aria-labelledby="flagship-heading">
   <div class="cr-section-header">
     <span class="cr-eyebrow">
-      <span aria-hidden="true">🌲</span>
-      <span>Inaugural 3-Way Edition</span>
+      <span aria-hidden="true">🧭</span>
+      <span>Co-Featured 3-Way Editions</span>
     </span>
-    <h2 id="flagship-heading" class="cr-section-title">Featured Edition: Cedar Run</h2>
+    <h2 id="flagship-heading" class="cr-section-title">Featured Editions: The Uncharted Waystation &amp; Cedar Run</h2>
   </div>
 
   {% for book in imprint.editions %}
@@ -158,7 +163,7 @@ seoDescription: "Step onto the porch with Crossroads Architects Rowan and Iris H
       <p class="cr-card-body" style="margin-bottom: 0.85rem;">{{ book.synopsis }}</p>
       <p class="cr-card-body"><em>{{ book.architectNote }}</em></p>
 
-      <ul class="cr-route-list" aria-label="Three Crossroads routes in {{ book.title }}">
+      <ul class="cr-route-list" aria-label="Featured Story Crossroads routes in {{ book.title }}">
         {% for route in book.routes %}
         <li class="cr-route-item">
           <span class="cr-route-badge">{{ route.badge }}</span>
@@ -171,11 +176,11 @@ seoDescription: "Step onto the porch with Crossroads Architects Rowan and Iris H
       <div class="cr-actions">
         <a href="{{ book.readUrl }}" class="cr-btn cr-btn-primary">
           <span aria-hidden="true">📖</span>
-          <span>Start Reading Cedar Run</span>
+          <span>Start Reading {{ book.title }}</span>
         </a>
         <a href="{{ book.worldUrl }}" class="cr-btn cr-btn-secondary">
-          <span aria-hidden="true">🌲</span>
-          <span>Explore Cedar Run World Guide</span>
+          <span aria-hidden="true">{{ book.worldIcon }}</span>
+          <span>{{ book.worldLabel }}</span>
         </a>
       </div>
     </div>

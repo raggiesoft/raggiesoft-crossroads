@@ -45,7 +45,7 @@ export default {
       label: 'Signpost Home',
       seoTitle: 'RaggieSoft Story Crossroads | Interactive Novels',
       seoDescription:
-        'Step onto the porch with Crossroads Architects Rowan and Iris Hawthorne to explore RaggieSoft Story Crossroads interactive branching novels.'
+        'Explore RaggieSoft Story Crossroads interactive novels with Rowan and Iris Hawthorne—featuring The Uncharted Waystation and Cedar Run.'
     },
     {
       url: '/architects',
@@ -73,7 +73,7 @@ export default {
       label: 'Bookshelf',
       seoTitle: 'Story Crossroads Bookshelf | Interactive Editions',
       seoDescription:
-        'Browse published RaggieSoft Story Crossroads interactive novels, starting with Cedar Run—our three-route Pacific Northwest wilderness story.'
+        'Browse RaggieSoft Story Crossroads interactive novels, featuring The Uncharted Waystation and Cedar Run—free in RaggieSoft Book Reader.'
     },
     {
       url: '/sandbox',
@@ -204,9 +204,50 @@ export default {
   ],
 
   /**
-   * Flagship & upcoming editions showcased on `/` and `/catalog`.
+   * Co-featured Story Crossroads editions showcased on `/` and `/catalog`.
+   * Each entry carries explicit `worldLabel` and `worldIcon` fields so shared
+   * Nunjucks loops render edition-specific portal buttons with zero hardcoded titles.
    */
   editions: [
+    {
+      slug: 'waystation',
+      title: 'The Uncharted Waystation',
+      subtitle: 'Book One: Tidewater and Studio 205 • Book Two: Vaeloria',
+      directionsLabel: '3-Way Story Crossroads Edition • 4 Signposts',
+      directionsCount: 3,
+      eraLabel: '1999–2002 Tidewater Virginia & Twin-Moon Vaeloria',
+      architectNote:
+        'Rowan & Iris’s Field Note: “Two months before Gwen turned eighteen—when Nolan’s controlling ex dragged him to the Norfolk bus station on a Tuesday-morning whim without calling forty-eight hours ahead for a wheelchair-accessible coach—your choices across Book One decide whether twenty-three-year-old Nolan breaks free in Norfolk and rides home in kind cabbie Denise Carter’s taxi, or endures the westbound Pathfinder route until sister Gwen and supervisor Mallory Walsh race west to bring him home. Every Book One trail leads Nolan, Gwen, and Mallory together into Studio 205 and barefoot across the 9:15 PM amber rift into Vaeloria—and Book Two’s nights and illustrations remember everything Nolan lived through on the way there.”',
+      cover2x3: `${CDN_BASE}/raggiesoft-books/images/covers/2x3/waystation.jpg`,
+      coverOg: `${CDN_BASE}/raggiesoft-books/images/covers/og/waystation.jpg`,
+      sealUrl: `${CDN_BASE}/raggiesoft-books/images/logos/story-crossroads-seal-3way.svg`,
+      readUrl: 'https://books.raggiesoft.com/waystation',
+      worldUrl: 'https://waystation.raggiesoft.com',
+      worldLabel: 'Explore The Uncharted Waystation Portal',
+      worldIcon: '🔮',
+      synopsis:
+        'After surviving two turbulent years in Tidewater Virginia and rebuilding side by side in a tiny Norfolk high-rise studio, twenty-four-year-old Nolan Lennox, his tall nineteen-year-old sister Gwen, and his devoted girlfriend Mallory Walsh tumble barefoot off Studio 205’s bed into the twin-moon borderlands of Vaeloria—choosing at every Story Crossroads how they break free on Earth and which gentle 1980s-fantasy road carries all three of them home to Keepers’ Hall.',
+      routes: [
+        {
+          badge: 'Book Two • Option 1 • Waterway Lanterns',
+          name: 'The Glasswater Lantern-Barge Canal',
+          summary:
+            'Rest bare feet on cushioned cedar planks aboard Maren’s glowing sapphire-lantern barge while navigating by double moonlight and brass star-charts.'
+        },
+        {
+          badge: 'Book Two • Option 2 • Cushion-Moss & Springs',
+          name: 'The Whisperwood Cushion-Moss Road',
+          summary:
+            'Walk unhurriedly over three-inch-deep velvet moss built by the Slow-Footed Order beside warm 98-degree crystal mineral foot-basins.'
+        },
+        {
+          badge: 'Book Two • Option 3 • Sky-Cable Gondolas',
+          name: 'The Brass Counterweight Gondola Way',
+          summary:
+            'Glide effortlessly up the Amber Crags inside water-balanced oak-and-brass sky gondolas past singing cliffside wind-harps.'
+        }
+      ]
+    },
     {
       slug: 'cedar-run',
       title: 'Cedar Run',
@@ -221,6 +262,8 @@ export default {
       sealUrl: `${CDN_BASE}/raggiesoft-books/images/logos/story-crossroads-seal-3way.svg`,
       readUrl: 'https://books.raggiesoft.com/cedar-run',
       worldUrl: 'https://cedarrun.raggiesoft.com',
+      worldLabel: 'Explore Cedar Run World Guide',
+      worldIcon: '🌲',
       synopsis:
         'Turned out on the evening of their eighteenth birthday simply for refusing to scatter onto three separate lives, fraternal brother Luke and identical twin sisters Tessa and Sadie Bridger step past their backyard fence into deep old-growth cedar forest with Grandpa Owen Sawyer’s canvas tool roll and 1974 mahogany guitar.',
       routes: [
@@ -241,43 +284,6 @@ export default {
           name: 'The Forgotten Stone Springhouse',
           summary:
             'Restore an overgrown 1930s mossy stone springhouse beside cold artesian water and wild huckleberry slopes.'
-        }
-      ]
-    },
-    {
-      slug: 'waystation',
-      title: 'The Uncharted Waystation',
-      subtitle: 'Book One: Tidewater and Studio 205 • Book Two: Vaeloria',
-      directionsLabel: '3-Way Story Crossroads Edition',
-      directionsCount: 3,
-      eraLabel: '1999–2002 Tidewater Virginia & Twin-Moon Vaeloria',
-      architectNote:
-        'Rowan & Iris’s Field Note: “Two months before Gwen turned eighteen—when Nolan’s controlling ex dragged him to the Norfolk bus station on a Tuesday-morning whim without calling forty-eight hours ahead for a wheelchair-accessible coach—your choices across Book One decide whether twenty-three-year-old Nolan breaks free in Norfolk and rides home in kind cabbie Denise Carter’s taxi, or endures the westbound Pathfinder route until sister Gwen and supervisor Mallory Walsh bring him home. Every Book One trail leads Nolan, Gwen, and Mallory together into Studio 205 and across the amber rift into Vaeloria—and Book Two’s nights and illustrations remember everything Nolan lived through on the way there.”',
-      cover2x3: `${CDN_BASE}/raggiesoft-books/images/covers/2x3/waystation.jpg`,
-      coverOg: `${CDN_BASE}/raggiesoft-books/images/covers/og/waystation.jpg`,
-      sealUrl: `${CDN_BASE}/raggiesoft-books/images/logos/story-crossroads-seal-3way.svg`,
-      readUrl: 'https://books.raggiesoft.com/waystation',
-      worldUrl: 'https://waystation.raggiesoft.com',
-      synopsis:
-        'After surviving two turbulent years in Tidewater Virginia and rebuilding side by side in a tiny Norfolk high-rise studio, twenty-four-year-old Nolan Lennox, his tall nineteen-year-old sister Gwen, and his girlfriend Mallory Walsh tumble barefoot off Studio 205’s bed into the twin-moon borderlands of Vaeloria—choosing at every Story Crossroads which gentle 1980s-fantasy road carries all three of them home to Keepers’ Hall.',
-      routes: [
-        {
-          badge: 'Option 1 • Waterway Lanterns',
-          name: 'The Glasswater Lantern-Barge Canal',
-          summary:
-            'Rest bare feet on cushioned cedar planks aboard Maren’s glowing sapphire-lantern barge while navigating by double moonlight.'
-        },
-        {
-          badge: 'Option 2 • Cushion-Moss & Springs',
-          name: 'The Whisperwood Cushion-Moss Road',
-          summary:
-            'Walk unhurriedly over three-inch-deep velvet moss built by the Slow-Footed Order beside warm 98-degree crystal mineral foot-basins.'
-        },
-        {
-          badge: 'Option 3 • Sky-Cable Gondolas',
-          name: 'The Brass Counterweight Gondola Way',
-          summary:
-            'Glide effortlessly up the Amber Crags inside water-balanced oak-and-brass sky gondolas past singing cliffside wind-harps.'
         }
       ]
     }
